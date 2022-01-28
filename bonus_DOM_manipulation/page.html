@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <head>
-    
+  <script src="script.js" defer></script>
+  <style>
+    .active {
+      background-color: blue;
+    }
+  </style>
+
+
 </head>
 <body>
     <h1>
@@ -11,6 +18,10 @@
         This is the glorious text-content!
       </div>
     </div>
-    <script src="script.js"></script>
+    <button onclick="alert('My HTML element has javascript')">Click Me</button>
+    <button id="btn">No, click me!</button>
+    <button id="btn2">I am the superior button</button>
+    <button id="btn3">I use a named function</button>
+    <button id="btn4">I pass the event object into the callback function</button>
   </body>
 </html>

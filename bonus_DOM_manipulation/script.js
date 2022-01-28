@@ -1,3 +1,5 @@
+// https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/dom-manipulation-and-events
+
 const container = document.querySelector('#container');
 
 const redTxt = document.createElement('p');
@@ -25,3 +27,31 @@ container.appendChild(newDiv);
 
 newDiv.appendChild(divTitle);
 newDiv.appendChild(divText);
+
+function alertFunction() {
+    alert('This is a test of the alert system');
+}
+
+const myBtn = document.querySelector('#btn');
+myBtn.onclick = () => alert('I use an on_event property in the JS file');
+
+const myBtn2 = document.querySelector('#btn2');
+myBtn2.addEventListener('click', () => {
+    alert('How you doin? I have an eventlistener');
+});
+
+const myBtn3 = document.querySelector('#btn3');
+myBtn3.addEventListener('click', alertFunction);
+
+const myBtn4 = document.querySelector('#btn4');
+myBtn4.addEventListener('click', function(e) {
+    e.target.classList.toggle('active');
+});
+
+// Attaching listeners to groups of nodes
+const buttons = document.querySelectorAll('button');
+buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        alert(btn.id);
+    });
+});
